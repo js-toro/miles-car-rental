@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	min-width: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow: auto;
+	width: 100%;
+	min-height: 100dvh;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	overflow: hidden;
+	width: 100%;
+	min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+img {
+	max-width: 100%;
+	border-style: none;
+	display: block;
+	object-fit: cover;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+menu,
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
