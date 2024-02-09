@@ -1,5 +1,19 @@
-import React from 'react';
+import {
+	LinkLogo,
+	HamburgerMenuButton,
+	LanguageMenuButton,
+	MoneyMenuButton,
+} from 'src/components';
+
+import { HeaderContainer } from './styles';
 
 export const Header: React.FC = () => {
-	return <></>;
+	return (
+		<HeaderContainer>
+			<HamburgerMenuButton />
+			<LinkLogo />
+			<MoneyMenuButton />
+			<LanguageMenuButton />
+		</HeaderContainer>
+	);
 };

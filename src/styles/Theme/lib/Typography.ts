@@ -26,15 +26,35 @@ const fontWeights: fontWeightsTypes = {
 	semibold: 700,
 };
 
+type fontSizesTypes = {
+	heading: {
+		xs: string;
+	};
+	text: {
+		xs: string;
+	};
+};
+
+const fontSizes: fontSizesTypes = {
+	heading: {
+		xs: '1.8rem',
+	},
+	text: {
+		xs: '1.6rem',
+	},
+};
+
 export type typographyTypes = {
-	Families: fontFamiliesTypes;
-	Weights: fontWeightsTypes;
+	families: fontFamiliesTypes;
+	weights: fontWeightsTypes;
+	sizes: fontSizesTypes;
 };
 
 /**
  * Objecto que define los estilos de fuentes de la aplicación
  */
 export const typography: typographyTypes = {
-	Families: fontFamilies,
-	Weights: fontWeights,
+	families: fontFamilies,
+	weights: fontWeights,
+	sizes: fontSizes,
 };

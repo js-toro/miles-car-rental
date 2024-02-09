@@ -1,4 +1,4 @@
-type GrayScale = {
+type grayScale = {
 	[100]: string;
 	[200]: string;
 	[300]: string;
@@ -15,7 +15,7 @@ export type colorsTypes = {
 	green: string;
 	black: string;
 	white: string;
-	gray: GrayScale;
+	gray: grayScale;
 };
 
 /**
