@@ -1,5 +1,11 @@
-import React from 'react';
+import { Promos, AgenciesCarrousel, Trustpilot } from './sections';
 
 export const Home: React.FC = () => {
-	return <></>;
+	return (
+		<main>
+			<Promos />
+			<Trustpilot />
+			<AgenciesCarrousel />
+		</main>
+	);
 };

@@ -18,4 +18,8 @@ export const GlobalStyles = createGlobalStyle`
 			font-size: ${theme.typography.sizes.heading.xs};
 		`}
 	}
+
+	section {
+		margin: 3.2rem 1.6rem;
+	}
 `;

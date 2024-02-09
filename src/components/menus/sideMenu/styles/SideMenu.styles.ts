@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MenuContent = styled.div<{ $isMenuOpen: boolean }>`
 	position: fixed;
-	z-index: 1000;
+	z-index: 2000;
 	bottom: 0;
 	top: 0;
 	left: 0;
