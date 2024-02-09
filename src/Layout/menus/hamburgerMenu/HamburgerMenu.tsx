@@ -1,37 +1,43 @@
 import { menu } from 'src/redux';
 import { useMenu } from 'src/hooks';
+import {
+	SideMenu,
+	LinkLogo,
+	LanguageMenuButton,
+	SocialLinks,
+} from 'src/components';
 
-import { SideMenu, LinkLogo, LanguageMenuButton } from 'src/components';
+import { Content, Header, Links, Socials } from './styles';
+
+import ReturnIcon from 'src/assets/icons/return-arrow.svg?react';
 
 export const HamburgerMenu: React.FC = () => {
 	const { isMenuOpen, handleToggleMenu } = useMenu(menu.hamburger);
 
 	return (
 		<SideMenu isMenuOpen={isMenuOpen}>
-			<header>
-				<button onClick={handleToggleMenu}>return</button>
+			<Content>
+				<Header>
+					<button onClick={handleToggleMenu}>
+						<ReturnIcon />
+					</button>
 
-				<LinkLogo />
-				<LanguageMenuButton />
-			</header>
+					<LinkLogo />
+					<LanguageMenuButton />
+				</Header>
 
-			<menu>
-				<a href="#">Requisitos de Alquiler</a>
-				<a href="#">Preguntas frecuentes</a>
-				<a href="#">Localidades</a>
-				<a href="#">Contáctanos</a>
-			</menu>
+				<Links>
+					<a href="#">Requisitos de Alquiler</a>
+					<a href="#">Preguntas frecuentes</a>
+					<a href="#">Localidades</a>
+					<a href="#">Contáctanos</a>
+				</Links>
 
-			<div>
-				<h4>SIGUENOS EN</h4>
-
-				<menu>
-					<a href="#">f</a>
-					<a href="#">t</a>
-					<a href="#">g</a>
-					<a href="#">i</a>
-				</menu>
-			</div>
+				<Socials>
+					<h4>SIGUENOS EN</h4>
+					<SocialLinks />
+				</Socials>
+			</Content>
 		</SideMenu>
 	);
 };
