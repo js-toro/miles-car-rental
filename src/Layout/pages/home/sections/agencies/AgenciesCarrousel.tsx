@@ -6,8 +6,8 @@ export const AgenciesCarrousel: React.FC = () => {
 		<Carrousel>
 			<Content>
 				{agencies.map((logo, index) => (
-					<Link href="/" key={index}>
-						<img key={index} src={logo.src} alt={logo.alt} />
+					<Link key={index} href={logo.href}>
+						<img key={index} src={logo.src} alt={logo.alt} draggable={false} />
 					</Link>
 				))}
 			</Content>

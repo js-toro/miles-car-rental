@@ -7,7 +7,7 @@ const animateCarrousel = keyframes`
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50% - 24px));
+    transform: translateX(calc(-50% - 25px));
   }
 `;
 
