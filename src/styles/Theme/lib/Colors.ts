@@ -6,9 +6,6 @@ type grayScale = {
 	[900]: string;
 };
 
-/**
- * Tipos de colores que se pueden utilizar en la aplicación
- */
 export type colorsTypes = {
 	primary: string;
 	background: string;
@@ -18,9 +15,6 @@ export type colorsTypes = {
 	gray: grayScale;
 };
 
-/**
- * Objecto que define los colores de la aplicación en modo light
- */
 export const lightColors: colorsTypes = {
 	primary: '#E6484B',
 	green: '#00B67A',
@@ -36,9 +30,6 @@ export const lightColors: colorsTypes = {
 	background: '#FFFFFF',
 };
 
-/**
- * Objecto que define los colores de la aplicación en modo light
- */
 export const darkColors: colorsTypes = {
 	primary: '#E6484B',
 	green: '#00B67A',

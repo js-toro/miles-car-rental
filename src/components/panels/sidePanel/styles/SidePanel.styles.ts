@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MenuContent = styled.div<{ $isMenuOpen: boolean }>`
+export const Content = styled.div<{ $isPanelOpen: boolean }>`
 	position: fixed;
 	z-index: 2000;
 	bottom: 0;
@@ -10,7 +10,7 @@ export const MenuContent = styled.div<{ $isMenuOpen: boolean }>`
 
 	background-color: #fff;
 
-	transform: ${({ $isMenuOpen }) =>
-		$isMenuOpen ? 'translateX(0)' : 'translateX(-100%)'};
+	transform: ${({ $isPanelOpen }) =>
+		$isPanelOpen ? 'translateX(0)' : 'translateX(-100%)'};
 	transition: transform 0.5s ease-in-out;
 `;

@@ -1,3 +1,9 @@
+/**
+ * @file AgenciesCarrousel.tsx
+ *
+ * Componente que renderiza el diseño del carrusel de agencias.
+ */
+
 import { Carrousel, Content, Link } from './styles';
 import { agencies } from './agencies';
 

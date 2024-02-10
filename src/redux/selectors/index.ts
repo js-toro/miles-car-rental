@@ -1,1 +1,1 @@
-export * from './menuSelector';
+export * from './panelSelector';

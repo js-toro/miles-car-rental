@@ -28,4 +28,8 @@ export const Content = styled.div`
 
 export const Link = styled.a`
 	height: 22px;
+
+	img {
+		object-fit: contain;
+	}
 `;

@@ -7,6 +7,13 @@ type PromoCardProps = {
 	alt: string;
 };
 
+/**
+ * Componente que muestra una tarjeta promocional
+ * @param {string | JSX.Element} title - Título de la tarjeta
+ * @param {string | JSX.Element} description - Descripción de la tarjeta
+ * @param {string} image - Imagen de la tarjeta
+ * @param {string} alt - Texto alternativo de la imagen
+ */
 export const PromoCard: React.FC<PromoCardProps> = ({
 	title,
 	description,

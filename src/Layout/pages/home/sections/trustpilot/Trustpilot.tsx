@@ -1,3 +1,9 @@
+/**
+ * @file Trustpilot.tsx
+ *
+ * Componente que renderiza el diseño de la sección de Trustpilot.
+ */
+
 import {
 	Content,
 	RaitingContainer,

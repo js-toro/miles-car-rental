@@ -1,31 +1,28 @@
+// Tipos de fuentes que se pueden utilizar en la aplicación
 type fontFamiliesTypes = {
 	primary: string;
 	secondary: string;
 };
 
-/**
- * Tipos de fuentes que se pueden utilizar en la aplicación
- */
 const fontFamilies: fontFamiliesTypes = {
 	primary: "'Poppins', sans-serif",
 	secondary: "'Roboto', sans-serif",
 };
 
+// Pesos de fuentes que se pueden utilizar en la aplicación
 type fontWeightsTypes = {
 	regular: number;
 	medium: number;
 	semibold: number;
 };
 
-/**
- * Pesos de fuentes que se pueden utilizar en la aplicación
- */
 const fontWeights: fontWeightsTypes = {
 	regular: 400,
 	medium: 500,
 	semibold: 700,
 };
 
+// Tamaños de fuentes que se pueden utilizar en la aplicación
 type fontSizesTypes = {
 	heading: {
 		xs: string;
@@ -50,9 +47,6 @@ export type typographyTypes = {
 	sizes: fontSizesTypes;
 };
 
-/**
- * Objecto que define los estilos de fuentes de la aplicación
- */
 export const typography: typographyTypes = {
 	families: fontFamilies,
 	weights: fontWeights,

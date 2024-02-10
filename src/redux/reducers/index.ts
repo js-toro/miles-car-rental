@@ -1,1 +1,1 @@
-export * from './menusReducer';
+export * from './panelReducer';

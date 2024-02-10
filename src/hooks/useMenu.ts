@@ -1,13 +1,23 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { menu, toggleMenu, menuSelector } from 'src/redux';
+import { panelName, togglePanel, panelSelector } from 'src/redux';
 
-export const useMenu = (menu: menu) => {
+/**
+ * Hook que devuelve el estado y la función para cambiar el estado de un panel.
+ * @param panel - El nombre del panel.
+ * @returns El estado y la función para cambiar el estado de un panel.
+ */
+export const usePanel = (panel: panelName) => {
 	const dispatch = useDispatch();
-	const isMenuOpen = useSelector((state) => menuSelector(state, menu)?.isOpen);
+	const isPanelOpen = useSelector(
+		(state) => panelSelector(state, panel)?.isOpen
+	);
 
-	const handleToggleMenu = () => {
-		dispatch(toggleMenu({ name: menu }));
+	/**
+	 * Cambia el estado del panel
+	 */
+	const handleTogglePanel = () => {
+		dispatch(togglePanel({ name: panel }));
 	};
 
-	return { isMenuOpen, handleToggleMenu };
+	return { isPanelOpen, handleTogglePanel };
 };
