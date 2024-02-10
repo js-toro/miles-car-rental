@@ -26,6 +26,12 @@ export const RaitingText = styled.p`
 	font-size: 2.2rem;
 `;
 
+export const RaitingStars = styled.div`
+	flex-shrink: 0;
+	display: flex;
+	gap: 1px;
+`;
+
 export const Text = styled.p`
 	text-align: center;
 	font-weight: ${({ theme }) => theme.typography.weights.semibold};

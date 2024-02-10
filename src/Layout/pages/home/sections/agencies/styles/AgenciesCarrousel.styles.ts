@@ -17,7 +17,7 @@ export const Content = styled.div`
 	align-items: center;
 	gap: 50px;
 
-	overflow: hidden;
+	overflow: visible;
 	width: max-content;
 
 	animation-name: ${animateCarrousel};
@@ -28,6 +28,11 @@ export const Content = styled.div`
 
 export const Link = styled.a`
 	height: 22px;
+	transition: transform 0.2s ease-in-out;
+
+	&:hover {
+		transform: scale(1.15);
+	}
 
 	img {
 		object-fit: contain;

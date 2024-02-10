@@ -7,21 +7,46 @@
 import {
 	Content,
 	RaitingContainer,
+	RaitingStars,
 	RaitingText,
 	Text,
 	TrustpilotLogo,
 } from './styles';
 
 import trustpilot from 'src/assets/logos/trustpilot.svg';
-import raitings from 'src/assets/designs/ratings.svg';
+import EmptyRaitingStar from 'src/assets/icons/empty-raiting-star.svg?react';
+import HalfRaitingStar from 'src/assets/icons/half-raiting-star.svg?react';
+import FullRaitingStar from 'src/assets/icons/full-rating-star.svg?react';
 
 export const Trustpilot: React.FC = () => {
+	const rating = 4.7;
+
 	return (
 		<Content>
 			<RaitingContainer>
 				<TrustpilotLogo src={trustpilot} alt="Trustpilot" draggable={false} />
-				<RaitingText>4.7 / 5</RaitingText>
-				<img src={raitings} alt="raiting" draggable={false} />
+				<RaitingText>{rating} / 5</RaitingText>
+				<RaitingStars>
+					{[
+						[...Array(5)].map((_, index) => {
+							const star = index + 1;
+							const halfStar = star - 0.5;
+							const isHalfStar = rating >= halfStar && rating < star;
+							const isFullStar = rating >= star;
+
+							if (isFullStar) {
+								// TODO: reemplazar por la etiqueta <i> para cada icono
+								return <FullRaitingStar key={index} />;
+							}
+
+							if (isHalfStar) {
+								return <HalfRaitingStar key={index} />;
+							}
+
+							return <EmptyRaitingStar key={index} />;
+						}),
+					]}
+				</RaitingStars>
 			</RaitingContainer>
 			<Text>Basado en 3312+ comentarios</Text>
 		</Content>
