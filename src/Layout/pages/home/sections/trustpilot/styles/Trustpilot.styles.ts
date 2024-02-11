@@ -6,6 +6,10 @@ export const Content = styled.section`
 	align-items: center;
 	justify-content: center;
 	gap: 16px;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet.medium}px) {
+		margin: 64px 16px;
+	}
 `;
 
 export const RaitingContainer = styled.div`

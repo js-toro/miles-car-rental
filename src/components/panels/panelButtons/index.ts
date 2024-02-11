@@ -1,3 +1,3 @@
-export * from './HamburgerMenuButton';
-export * from './LanguagePanelButton';
-export * from './MoneyPanelButton';
+export * from './hamburgerMenuButton';
+export * from './languagePanelButton';
+export * from './moneyPanelButton';

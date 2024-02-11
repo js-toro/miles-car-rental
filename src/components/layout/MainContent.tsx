@@ -15,5 +15,5 @@ export const MainContent: React.FC<MainContentProps> = ({ children }) => {
 			?.style.setProperty('margin-top', `${headerHeight}px`);
 	});
 
-	return <main>{children}</main>;
+	return <main id="initial">{children}</main>;
 };

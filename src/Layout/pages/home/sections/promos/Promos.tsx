@@ -4,25 +4,29 @@
  * Componente que renderiza el diseño de las promociones de la aplicación.
  */
 
+import PCAR_US from 'src/assets/images/PCAR_US.webp';
 import { PromoCard } from 'src/components';
 
-import PCAR_US from 'src/assets/images/PCAR_US.png';
+import { PromosCarrousel, PromosContainer } from './styles';
 
 export const Promos: React.FC = () => {
 	return (
-		<section>
-			{/* Aquí podríamos construir un carrusel y mapear una lista de promociones */}
-
-			<PromoCard
-				title={
-					<>
-						¡Seguro de viaje <span>gratis!</span>
-					</>
-				}
-				description="Con cobertura médica frente al Coronavirus de USD $100.000"
-				image={PCAR_US}
-				alt="Imagen de un auto con un seguro de viaje gratis"
-			/>
-		</section>
+		<PromosContainer>
+			<PromosCarrousel>
+				{[...Array(5)].map((_, index) => (
+					<PromoCard
+						key={index}
+						title={
+							<>
+								¡Seguro de viaje <span>gratis!</span>
+							</>
+						}
+						description="Con cobertura médica frente al Coronavirus de USD $100.000"
+						image={PCAR_US}
+						alt="Imagen de un auto con un seguro de viaje gratis"
+					/>
+				))}
+			</PromosCarrousel>
+		</PromosContainer>
 	);
 };

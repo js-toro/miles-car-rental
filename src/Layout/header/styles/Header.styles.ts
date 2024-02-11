@@ -14,10 +14,28 @@ export const HeaderContainer = styled.header`
 
 	background-color: ${({ theme }) => theme.colors.background};
 	box-shadow: 0 0 0 2px #f9f9f9, 0 0 0 3px #eaeaea;
+`;
 
-	& > a {
-		margin-right: auto;
+export const HomeLink = styled.a`
+	margin-right: auto;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet.large}px) {
+		margin-right: 16px;
 	}
 `;
 
-export const MobileNav = styled.nav``;
+export const NavMenu = styled.nav`
+	display: none;
+	align-items: center;
+	gap: 32px;
+
+	margin-right: auto;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet.large}px) {
+		display: flex;
+	}
+
+	a {
+		color: ${({ theme }) => theme.colors.black};
+	}
+`;

@@ -10,7 +10,7 @@ import {
 	MoneyPanelButton,
 } from 'src/components';
 
-import { HeaderContainer } from './styles';
+import { HeaderContainer, HomeLink, NavMenu } from './styles';
 
 import Logo from '/src/assets/icons/logo.svg?react';
 
@@ -19,9 +19,18 @@ export const Header: React.FC = () => {
 		<HeaderContainer>
 			<HamburgerMenuButton />
 
-			<a href="#initial">
-				<Logo />
-			</a>
+			<HomeLink href="#initial">
+				<i>
+					<Logo />
+				</i>
+			</HomeLink>
+
+			<NavMenu>
+				<a href="#">Requisitos de Alquiler</a>
+				<a href="#">Preguntas frecuentes</a>
+				<a href="#">Localidades</a>
+				<a href="#">Contáctanos</a>
+			</NavMenu>
 
 			<MoneyPanelButton />
 			<LanguagePanelButton />

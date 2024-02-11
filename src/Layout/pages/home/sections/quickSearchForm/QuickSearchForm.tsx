@@ -1,3 +1,9 @@
+/**
+ * @file QuickSearchForm.tsx
+ *
+ * Componente que renderiza el formulario de búsqueda rápida de la aplicación.
+ */
+
 import { useState } from 'react';
 import { SwitchButton } from 'src/components';
 
@@ -8,11 +14,15 @@ import {
 	PickupLabel,
 	ReturnLabel,
 	SwitchReturnContainer,
-	SwitchReturnText,
 	DatePickersContainer,
-	SubmitButton,
-	Background,
 	DateLabel,
+	SubmitButtonContainer,
+	SubmitButton,
+	SearchIcon,
+	Background,
+	LabelIcon,
+	LabelSpan,
+	LabelInput,
 } from './styles';
 
 import PickupSVG from 'src/assets/icons/car-pickup.svg?react';
@@ -35,59 +45,69 @@ export const QuickSearchForm: React.FC = () => {
 
 			<PickupAndReturnContainer>
 				<PickupLabel $hasReturn={hasReturn}>
-					<i>
+					<LabelIcon>
 						<PickupSVG />
-					</i>
+					</LabelIcon>
 
-					<span>Localidad de Retiro</span>
-					<input value="Ciudad, Aeropuerto o Localidad" onChange={() => {}} />
+					<LabelSpan>Localidad de Retiro</LabelSpan>
+					<LabelInput
+						value="Ciudad, Aeropuerto o Localidad"
+						onChange={() => {}}
+					/>
 				</PickupLabel>
 
 				<ReturnLabel $hasReturn={hasReturn}>
-					<i>
+					<LabelIcon>
 						<ReturnSVG />
-					</i>
+					</LabelIcon>
 
-					<span>Localidad de de Devolución</span>
-					<input value="Ciudad, Aeropuerto o Localidad" onChange={() => {}} />
+					<LabelSpan>Localidad de de Devolución</LabelSpan>
+					<LabelInput
+						value="Ciudad, Aeropuerto o Localidad"
+						onChange={() => {}}
+					/>
 				</ReturnLabel>
 			</PickupAndReturnContainer>
 
 			<SwitchReturnContainer onClick={handleReturnToggle}>
 				<SwitchButton isActive={hasReturn} />
-				<SwitchReturnText>
-					lo quiero devolver en otra localidad
-				</SwitchReturnText>
+				<span>lo quiero devolver en otra localidad</span>
 			</SwitchReturnContainer>
 
 			<DatePickersContainer>
 				<DateLabel>
-					<i>
+					<LabelIcon>
 						<CalendarPickupSVG />
-					</i>
+					</LabelIcon>
 
-					<span>Recogida</span>
-					<input value="2 Jul" onChange={() => {}} />
+					<LabelSpan>Recogida</LabelSpan>
+					<LabelInput value="2 Jul" onChange={() => {}} />
 				</DateLabel>
 
 				<DateLabel>
-					<i>
+					<LabelIcon>
 						<CalendarReturnSVG />
-					</i>
+					</LabelIcon>
 
-					<span>Devolución</span>
-					<input value="5 Jul" onChange={() => {}} />
+					<LabelSpan>Devolución</LabelSpan>
+					<LabelInput value="5 Jul" onChange={() => {}} />
 				</DateLabel>
 			</DatePickersContainer>
 
-			<SubmitButton>
-				<i>
-					<SearchSVG />
-				</i>
-			</SubmitButton>
+			<SubmitButtonContainer>
+				<SubmitButton>
+					<SearchIcon>
+						<SearchSVG />
+					</SearchIcon>
+				</SubmitButton>
+			</SubmitButtonContainer>
 
 			<Background>
-				<img src={background} alt="Imagen background del buscador rápido" />
+				<img
+					src={background}
+					alt="Imagen background del buscador rápido"
+					loading="lazy"
+				/>
 			</Background>
 		</FormContainer>
 	);

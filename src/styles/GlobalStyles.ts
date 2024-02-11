@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import './css/normalize.css';
 
 export const GlobalStyles = createGlobalStyle`
@@ -13,7 +13,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 	h1 {
+		text-align: center;
+		text-transform: uppercase;
+
 		${({ theme }) => css`
+			color: ${({ theme }) => theme.colors.white};
 			font-weight: ${theme.typography.weights.semibold};
 			font-size: ${theme.typography.sizes.heading.xs};
 		`}
@@ -22,4 +26,10 @@ export const GlobalStyles = createGlobalStyle`
 	section {
 		margin: 3.2rem 1.6rem;
 	}
+`;
+
+export const Container = styled.div`
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
 `;

@@ -13,7 +13,12 @@ export const AgenciesCarrousel: React.FC = () => {
 			<Content>
 				{agencies.map((logo, index) => (
 					<Link key={index} href={logo.href}>
-						<img src={logo.src} alt={logo.alt} draggable={false} />
+						<img
+							src={logo.src}
+							alt={logo.alt}
+							draggable={false}
+							loading="lazy"
+						/>
 					</Link>
 				))}
 			</Content>

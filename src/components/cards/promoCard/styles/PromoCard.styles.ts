@@ -13,21 +13,28 @@ export const Content = styled.article`
 	align-items: center;
 	row-gap: 32px;
 
+	width: calc(100dvw - 32px);
+	max-width: 450px;
 	padding: 8px 8px 16px 8px;
+
 	border-radius: 16px;
 	border: 1px solid ${({ theme }) => theme.colors.gray[100]};
+	background-color: ${({ theme }) => theme.colors.white};
+
+	img {
+		object-fit: contain;
+		z-index: 1;
+	}
 `;
 
 export const Design = styled(DesignPlus)`
 	position: absolute;
-	z-index: -1;
 	top: 18px;
 	left: 40%;
 `;
 
 export const Heading = styled.h4`
 	position: relative;
-	z-index: -1;
 
 	text-align: center;
 	text-transform: uppercase;

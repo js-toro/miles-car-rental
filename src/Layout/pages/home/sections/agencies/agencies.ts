@@ -111,4 +111,104 @@ export const agencies = [
 		alt: 'Payless',
 		href: 'https://www.milescarrental.com/es/estados-unidos/anaheim/alquiler-autos-payless',
 	},
+	{
+		src: Alamo,
+		alt: 'Alamo',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-alamo',
+	},
+	{
+		src: Budget,
+		alt: 'Budget',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-budget',
+	},
+	{
+		src: Hertz,
+		alt: 'Hertz',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-hertz',
+	},
+	{
+		src: National,
+		alt: 'National',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-national',
+	},
+	{
+		src: Avis,
+		alt: 'Avis',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-avis',
+	},
+	{
+		src: Dollar,
+		alt: 'Dollar',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-dollar',
+	},
+	{
+		src: Enterprise,
+		alt: 'Enterprise',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-enterprise',
+	},
+	{
+		src: Sixt,
+		alt: 'Sixt',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-sixt',
+	},
+	{
+		src: Thrifty,
+		alt: 'Thrifty',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-thrifty',
+	},
+	{
+		src: Payless,
+		alt: 'Payless',
+		href: 'https://www.milescarrental.com/es/estados-unidos/anaheim/alquiler-autos-payless',
+	},
+	{
+		src: Alamo,
+		alt: 'Alamo',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-alamo',
+	},
+	{
+		src: Budget,
+		alt: 'Budget',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-budget',
+	},
+	{
+		src: Hertz,
+		alt: 'Hertz',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-hertz',
+	},
+	{
+		src: National,
+		alt: 'National',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-national',
+	},
+	{
+		src: Avis,
+		alt: 'Avis',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-avis',
+	},
+	{
+		src: Dollar,
+		alt: 'Dollar',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-dollar',
+	},
+	{
+		src: Enterprise,
+		alt: 'Enterprise',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-enterprise',
+	},
+	{
+		src: Sixt,
+		alt: 'Sixt',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-sixt',
+	},
+	{
+		src: Thrifty,
+		alt: 'Thrifty',
+		href: 'https://www.milescarrental.com/es/estados-unidos/alquiler-autos-thrifty',
+	},
+	{
+		src: Payless,
+		alt: 'Payless',
+		href: 'https://www.milescarrental.com/es/estados-unidos/anaheim/alquiler-autos-payless',
+	},
 ];

@@ -2,9 +2,9 @@ export type Device = 'mobile' | 'tablet' | 'laptop' | 'desktop';
 
 export type breakpointsTypes = {
 	[device in Device]: {
-		small: string;
-		medium: string;
-		large: string;
+		small: number;
+		medium: number;
+		large: number;
 	};
 };
 
@@ -13,23 +13,23 @@ export type breakpointsTypes = {
  */
 export const breakpoints: breakpointsTypes = {
 	mobile: {
-		small: '320px',
-		medium: '380px',
-		large: '425px',
+		small: 320,
+		medium: 380,
+		large: 425,
 	},
 	tablet: {
-		small: '576px',
-		medium: '768px',
-		large: '992px',
+		small: 576,
+		medium: 768,
+		large: 992,
 	},
 	laptop: {
-		small: '1024px',
-		medium: '1200px',
-		large: '1440px',
+		small: 1024,
+		medium: 1200,
+		large: 1440,
 	},
 	desktop: {
-		small: '1600px',
-		medium: '1920px',
-		large: '2560px',
+		small: 1600,
+		medium: 1920,
+		large: 2560,
 	},
 };

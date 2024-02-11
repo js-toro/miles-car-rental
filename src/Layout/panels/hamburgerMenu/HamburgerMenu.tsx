@@ -4,8 +4,9 @@
  * Componente que renderiza el diseño del menú de hamburguesa de la aplicación.
  */
 
+import { useTheme } from 'styled-components';
+import { usePanel, useMediaQuerie } from 'src/hooks';
 import { panelName } from 'src/redux';
-import { usePanel } from 'src/hooks';
 import { SidePanel, LanguagePanelButton } from 'src/components';
 
 import { Content, Header, Links, Socials } from './styles';
@@ -20,50 +21,57 @@ import InstagramIcon from '/src/assets/icons/instagram.svg?react';
 export const HamburgerMenu: React.FC = () => {
 	const { isPanelOpen, handleTogglePanel } = usePanel(panelName.hamburger);
 
-	return (
-		<SidePanel isPanelOpen={isPanelOpen}>
-			<Content>
-				<Header>
-					<button onClick={handleTogglePanel}>
-						<ReturnIcon />
-					</button>
+	const breakpoint = useTheme().breakpoints.tablet.large;
+	const isMobile = useMediaQuerie(breakpoint);
 
-					<a href="#initial">
-						<Logo />
-					</a>
+	if (isMobile) {
+		return (
+			<SidePanel isPanelOpen={isPanelOpen}>
+				<Content>
+					<Header>
+						<button onClick={handleTogglePanel}>
+							<ReturnIcon />
+						</button>
 
-					<LanguagePanelButton />
-				</Header>
-
-				<Links>
-					<a href="#">Requisitos de Alquiler</a>
-					<a href="#">Preguntas frecuentes</a>
-					<a href="#">Localidades</a>
-					<a href="#">Contáctanos</a>
-				</Links>
-
-				<Socials>
-					<h4>SIGUENOS EN</h4>
-
-					<menu>
-						<a href="#">
-							<FacebookIcon />
+						<a href="#initial">
+							<i><Logo /></i>
 						</a>
 
-						<a href="#">
-							<TwitterIcon />
-						</a>
+						<LanguagePanelButton />
+					</Header>
 
-						<a href="#">
-							<GooglePlusIcon />
-						</a>
+					<Links>
+						<a href="#">Requisitos de Alquiler</a>
+						<a href="#">Preguntas frecuentes</a>
+						<a href="#">Localidades</a>
+						<a href="#">Contáctanos</a>
+					</Links>
 
-						<a href="#">
-							<InstagramIcon />
-						</a>
-					</menu>
-				</Socials>
-			</Content>
-		</SidePanel>
-	);
+					<Socials>
+						<h4>SIGUENOS EN</h4>
+
+						<menu>
+							<a href="#">
+								<FacebookIcon />
+							</a>
+
+							<a href="#">
+								<TwitterIcon />
+							</a>
+
+							<a href="#">
+								<GooglePlusIcon />
+							</a>
+
+							<a href="#">
+								<InstagramIcon />
+							</a>
+						</menu>
+					</Socials>
+				</Content>
+			</SidePanel>
+		);
+	}
+
+	return <></>;
 };
