@@ -11,6 +11,25 @@ const Label = styled.label`
 	padding: 16px;
 
 	background-color: ${({ theme }) => theme.colors.background};
+
+	input {
+		border: none;
+		outline: none;
+
+		font-size: 1.8rem;
+		font-family: ${({ theme }) => theme.typography.families.primary};
+		font-weight: ${({ theme }) => theme.typography.weights.medium};
+		color: ${({ theme }) => theme.colors.texts};
+		background-color: ${({ theme }) => theme.colors.background};
+
+		&::placeholder {
+			color: ${({ theme }) => theme.colors.texts};
+		}
+
+		&:focus::placeholder {
+			color: transparent;
+		}
+	}
 `;
 
 export const PickupLabel = styled(Label)<{ $hasReturn: boolean }>`
@@ -29,7 +48,7 @@ export const ReturnLabel = styled(Label)<{ $hasReturn: boolean }>`
 		`}
 `;
 
-export const DateLabel = styled(Label)`
+export const DatePickerLabel = styled(Label)`
 	flex-grow: 1;
 `;
 
@@ -45,13 +64,4 @@ export const LabelSpan = styled.span`
 	color: ${({ theme }) => theme.colors.gray[900]};
 `;
 
-export const LabelInput = styled.input`
-	border: none;
-	outline: none;
 
-	font-size: 1.8rem;
-	font-family: ${({ theme }) => theme.typography.families.primary};
-	font-weight: ${({ theme }) => theme.typography.weights.medium};
-	color: ${({ theme }) => theme.colors.texts};
-	background-color: ${({ theme }) => theme.colors.background};
-`;

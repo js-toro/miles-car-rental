@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
  * @param minWidth - El ancho mínimo de la pantalla.
  * @returns Un booleano que indica si el ancho de la pantalla es menor al valor especificado.
  */
-export const useMediaQuerie = (minWidth: number) => {
+export const useMediaQuery = (minWidth: number) => {
 	const [response, setResponse] = useState(false);
 
 	useEffect(() => {

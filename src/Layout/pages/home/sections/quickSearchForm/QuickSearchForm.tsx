@@ -5,7 +5,9 @@
  */
 
 import { useState } from 'react';
+import DatePicker from 'react-datepicker';
 import { SwitchButton } from 'src/components';
+import { useTheme } from 'styled-components';
 
 import {
 	FormContainer,
@@ -15,15 +17,16 @@ import {
 	ReturnLabel,
 	SwitchReturnContainer,
 	DatePickersContainer,
-	DateLabel,
+	DatePickerLabel,
+	DatePickerWrapper,
 	SubmitButtonContainer,
 	SubmitButton,
 	SearchIcon,
 	Background,
 	LabelIcon,
 	LabelSpan,
-	LabelInput,
 } from './styles';
+import { date, formatDate } from './utilities';
 
 import PickupSVG from 'src/assets/icons/car-pickup.svg?react';
 import ReturnSVG from 'src/assets/icons/car-return.svg?react';
@@ -31,13 +34,23 @@ import CalendarPickupSVG from 'src/assets/icons/calendar-pickup.svg?react';
 import CalendarReturnSVG from 'src/assets/icons/calendar-return.svg?react';
 import SearchSVG from 'src/assets/icons/search.svg?react';
 import background from 'src/assets/designs/background-qs.svg';
+import { useMediaQuery } from 'src/hooks';
 
 export const QuickSearchForm: React.FC = () => {
+	// TODO: Hacer validación de formulario
+
 	const [hasReturn, setHasReturn] = useState(false);
 
 	const handleReturnToggle = () => {
 		setHasReturn(!hasReturn);
 	};
+
+	const [startDate, setStartDate] = useState(date.today);
+	const [endDate, setEndDate] = useState(date.upcoming(5));
+
+	const breakpoint = useTheme().breakpoints.tablet.large;
+	const isMobile = useMediaQuery(breakpoint);
+	const amountOfMonths = isMobile ? 1 : 2;
 
 	return (
 		<FormContainer action="/search">
@@ -50,10 +63,7 @@ export const QuickSearchForm: React.FC = () => {
 					</LabelIcon>
 
 					<LabelSpan>Localidad de Retiro</LabelSpan>
-					<LabelInput
-						value="Ciudad, Aeropuerto o Localidad"
-						onChange={() => {}}
-					/>
+					<input placeholder="Ciudad, Aeropuerto o Localidad" />
 				</PickupLabel>
 
 				<ReturnLabel $hasReturn={hasReturn}>
@@ -62,10 +72,7 @@ export const QuickSearchForm: React.FC = () => {
 					</LabelIcon>
 
 					<LabelSpan>Localidad de de Devolución</LabelSpan>
-					<LabelInput
-						value="Ciudad, Aeropuerto o Localidad"
-						onChange={() => {}}
-					/>
+					<input placeholder="Ciudad, Aeropuerto o Localidad" />
 				</ReturnLabel>
 			</PickupAndReturnContainer>
 
@@ -75,23 +82,58 @@ export const QuickSearchForm: React.FC = () => {
 			</SwitchReturnContainer>
 
 			<DatePickersContainer>
-				<DateLabel>
+				<DatePickerLabel>
 					<LabelIcon>
 						<CalendarPickupSVG />
 					</LabelIcon>
 
 					<LabelSpan>Recogida</LabelSpan>
-					<LabelInput value="2 Jul" onChange={() => {}} />
-				</DateLabel>
+					<DatePickerWrapper>
+						<DatePicker
+							selected={startDate}
+							value={formatDate(startDate)}
+							onChange={(dates: any) => {
+								const [start, end] = dates;
 
-				<DateLabel>
+								setStartDate(start);
+								setEndDate(end);
+							}}
+							startDate={startDate}
+							endDate={endDate}
+							minDate={date.today}
+							selectsRange
+							monthsShown={amountOfMonths}
+							withPortal={isMobile}
+							fixedHeight
+							locale="es"
+						/>
+					</DatePickerWrapper>
+				</DatePickerLabel>
+
+				<DatePickerLabel>
 					<LabelIcon>
 						<CalendarReturnSVG />
 					</LabelIcon>
 
 					<LabelSpan>Devolución</LabelSpan>
-					<LabelInput value="5 Jul" onChange={() => {}} />
-				</DateLabel>
+					<DatePickerWrapper>
+						<DatePicker
+							selected={endDate}
+							value={formatDate(endDate ? endDate : startDate)}
+							onChange={(date: Date) => {
+								setEndDate(date);
+							}}
+							selectsEnd
+							startDate={startDate}
+							endDate={endDate}
+							minDate={startDate}
+							monthsShown={amountOfMonths}
+							withPortal={isMobile}
+							fixedHeight
+							locale="es"
+						/>
+					</DatePickerWrapper>
+				</DatePickerLabel>
 			</DatePickersContainer>
 
 			<SubmitButtonContainer>

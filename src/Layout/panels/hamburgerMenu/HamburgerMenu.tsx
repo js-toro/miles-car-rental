@@ -5,7 +5,7 @@
  */
 
 import { useTheme } from 'styled-components';
-import { usePanel, useMediaQuerie } from 'src/hooks';
+import { usePanel, useMediaQuery } from 'src/hooks';
 import { panelName } from 'src/redux';
 import {
 	SidePanel,
@@ -26,7 +26,7 @@ export const HamburgerMenu: React.FC = () => {
 	const { isPanelOpen, handleTogglePanel } = usePanel(panelName.hamburger);
 
 	const breakpoint = useTheme().breakpoints.tablet.large;
-	const isMobile = useMediaQuerie(breakpoint);
+	const isMobile = useMediaQuery(breakpoint);
 
 	if (isMobile) {
 		return (

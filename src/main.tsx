@@ -6,6 +6,11 @@ import { store } from './redux';
 import { GlobalStyles, ThemeProvider } from './styles';
 import { Layout } from './layout';
 
+// React Datepicker
+import { registerLocale } from 'react-datepicker';
+import es from 'date-fns/locale/es';
+registerLocale('es', es);
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<Provider store={store}>

@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import './css/normalize.css';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export const GlobalStyles = createGlobalStyle`
   body {

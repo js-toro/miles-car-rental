@@ -1,2 +1,2 @@
 export * from './usePanel';
-export * from './useMediaQuerie';
+export * from './useMediaQuery';
