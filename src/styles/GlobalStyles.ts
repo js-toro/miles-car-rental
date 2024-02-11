@@ -31,6 +31,11 @@ export const GlobalStyles = createGlobalStyle`
 
 export const Container = styled.div`
 	width: 100%;
-	max-width: 1000px;
+	max-width: 768px;
 	margin: 0 auto;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet.small}px) {
+		width: 80%;
+		max-width: 600px;
+	}
 `;

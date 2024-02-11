@@ -23,7 +23,6 @@ export const Content = styled.article`
 
 	img {
 		object-fit: contain;
-		z-index: 1;
 	}
 `;
 

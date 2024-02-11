@@ -38,16 +38,108 @@ export const SwitchReturnContainer = styled(Container)`
 `;
 
 export const DatePickersContainer = styled(Container)`
+	overflow: hidden;
 	display: flex;
 	margin-bottom: calc(${buttonHeight} / 2);
 
+	text-transform: capitalize;
 	border: 1px solid ${({ theme }) => theme.colors.gray[300]};
 	background-color: ${({ theme }) => theme.colors.white};
 	border-radius: 6px;
-	overflow: hidden;
 
 	& label:first-child {
 		border-right: 1px solid ${({ theme }) => theme.colors.gray[100]};
+	}
+
+	input {
+		width: 100%;
+		text-transform: capitalize;
+		caret-color: transparent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.react-datepicker {
+		font-family: ${({ theme }) => theme.typography.families.primary};
+		font-size: 1rem;
+		background-color: ${({ theme }) => theme.colors.background};
+		border: none;
+		border-radius: 10px;
+		padding: 32px 16px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+
+		@media (max-width: ${({ theme }) => theme.breakpoints.tablet.large}px) {
+			z-index: 999;
+		}
+
+		&__month-container {
+			margin: 16px;
+		}
+
+		&__current-month {
+			color: ${({ theme }) => theme.colors.texts};
+		}
+
+		&__header {
+			background-color: transparent;
+			border: none;
+		}
+
+		&__day {
+			margin: 0;
+			border-radius: 0;
+			color: ${({ theme }) => theme.colors.texts};
+			transition: all 0.1s ease;
+
+			&--in-selecting-range,
+			&:hover {
+				background-color: ${({ theme }) => theme.colors.primary + 'aa'};
+				color: ${({ theme }) => theme.colors.texts};
+			}
+
+			&--disabled {
+				color: ${({ theme }) => theme.colors.gray[400]};
+			}
+
+			&--in-range {
+				background-color: ${({ theme }) => theme.colors.primary + '55'};
+				color: ${({ theme }) => theme.colors.texts};
+			}
+
+			/* &--in-selecting-range {
+				background-color: ${({ theme }) => theme.colors.primary + 'aa'};
+				color: ${({ theme }) => theme.colors.white};
+			} */
+
+			&--range-start,
+			&--range-end {
+				background-color: ${({ theme }) => theme.colors.primary};
+				color: ${({ theme }) => theme.colors.white};
+			}
+
+			&--range-start {
+				border-radius: 4px 0 0 4px;
+			}
+
+			&--range-end {
+				border-radius: 0 4px 4px 0;
+			}
+
+			&-name {
+				color: ${({ theme }) => theme.colors.gray[900]};
+				font-weight: ${({ theme }) => theme.typography.weights.semibold};
+			}
+
+			&-names {
+				margin: 16px 0;
+			}
+		}
+
+		&__triangle {
+			display: none;
+		}
 	}
 `;
 
