@@ -28,6 +28,7 @@ export const RaitingText = styled.p`
 	font-family: ${({ theme }) => theme.typography.families.secondary};
 	font-weight: ${({ theme }) => theme.typography.weights.regular};
 	font-size: 2.2rem;
+	color: ${({ theme }) => theme.colors.texts};
 `;
 
 export const RaitingStars = styled.div`
@@ -40,4 +41,5 @@ export const Text = styled.p`
 	text-align: center;
 	font-weight: ${({ theme }) => theme.typography.weights.semibold};
 	font-size: 1.2rem;
+	color: ${({ theme }) => theme.colors.texts};
 `;

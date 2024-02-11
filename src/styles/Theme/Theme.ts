@@ -5,18 +5,21 @@ import { typography, typographyTypes } from './lib';
 import 'styled-components';
 
 type themeTypes = {
+	type: string;
 	colors: colorsTypes;
 	typography: typographyTypes;
 	breakpoints: breakpointsTypes;
 };
 
 export const lightTheme: themeTypes = {
+	type: 'light',
 	colors: lightColors,
 	typography,
 	breakpoints,
 };
 
 export const darkTheme: themeTypes = {
+	type: 'dark',
 	colors: darkColors,
 	typography,
 	breakpoints,

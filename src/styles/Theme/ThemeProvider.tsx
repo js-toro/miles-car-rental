@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { ThemeProvider as Provider } from 'styled-components';
 
 import { lightTheme, darkTheme } from './Theme';
@@ -7,7 +8,11 @@ type ThemeProps = {
 };
 
 export const ThemeProvider: React.FC<ThemeProps> = ({ children }) => {
-	// TODO: con useContext podremos cambiar el tema de la app en un futuro
+	const theme = useSelector((state: any) => state.theme.name);
 
-	return <Provider theme={lightTheme}>{children}</Provider>;
+	return (
+		<Provider theme={theme === 'light' ? lightTheme : darkTheme}>
+			{children}
+		</Provider>
+	);
 };

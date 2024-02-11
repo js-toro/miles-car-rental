@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { panelReducer } from './reducers';
+import { themeReducer, panelReducer } from './reducers';
 
 export const store = configureStore({
 	reducer: {
+		theme: themeReducer,
 		panel: panelReducer,
 	},
 });

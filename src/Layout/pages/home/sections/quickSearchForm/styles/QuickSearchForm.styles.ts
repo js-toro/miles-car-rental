@@ -44,8 +44,9 @@ export const DatePickersContainer = styled(Container)`
 	border: 1px solid ${({ theme }) => theme.colors.gray[300]};
 	background-color: ${({ theme }) => theme.colors.white};
 	border-radius: 6px;
+	overflow: hidden;
 
-	& > label {
+	& label:first-child {
 		border-right: 1px solid ${({ theme }) => theme.colors.gray[100]};
 	}
 `;
@@ -65,7 +66,7 @@ export const SubmitButton = styled.button`
 	height: ${buttonHeight};
 
 	border-radius: 10px;
-	border: 6px solid ${({ theme }) => theme.colors.white};
+	border: 6px solid ${({ theme }) => theme.colors.background};
 	background-color: ${({ theme }) => theme.colors.primary};
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 `;
@@ -92,5 +93,7 @@ export const Background = styled.picture`
 		width: 100%;
 		height: 100%;
 		object-position: bottom center;
+		filter: ${({ theme }) =>
+			theme.type === 'light' ? 'none' : 'saturate(0) brightness(0.5)'};
 	}
 `;

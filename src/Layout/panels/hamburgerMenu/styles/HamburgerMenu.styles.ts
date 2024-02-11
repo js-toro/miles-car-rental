@@ -7,6 +7,8 @@ export const Content = styled.nav`
 
 	height: 100%;
 	padding: 8px 16px 64px 16px;
+
+	background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const Header = styled.header`
@@ -23,7 +25,7 @@ export const Links = styled.menu`
 
 	a {
 		font-size: 2.2rem;
-		color: ${({ theme }) => theme.colors.black};
+		color: ${({ theme }) => theme.colors.texts};
 	}
 `;
 
@@ -42,6 +44,5 @@ export const Socials = styled.div`
 	menu {
 		display: flex;
 		gap: 64px;
-		align-items: center;
 	}
 `;

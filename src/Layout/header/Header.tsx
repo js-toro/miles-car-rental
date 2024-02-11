@@ -10,9 +10,9 @@ import {
 	MoneyPanelButton,
 } from 'src/components';
 
-import { HeaderContainer, HomeLink, NavMenu } from './styles';
+import Logo from 'src/assets/icons/logo.svg?react';
 
-import Logo from '/src/assets/icons/logo.svg?react';
+import { HeaderContainer, HomeLink, NavMenu } from './styles';
 
 export const Header: React.FC = () => {
 	return (

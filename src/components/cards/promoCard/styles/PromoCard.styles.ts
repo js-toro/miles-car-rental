@@ -19,7 +19,7 @@ export const Content = styled.article`
 
 	border-radius: 16px;
 	border: 1px solid ${({ theme }) => theme.colors.gray[100]};
-	background-color: ${({ theme }) => theme.colors.white};
+	background-color: ${({ theme }) => theme.colors.background};
 
 	img {
 		object-fit: contain;
@@ -40,6 +40,7 @@ export const Heading = styled.h4`
 	text-transform: uppercase;
 	font-size: 2.2rem;
 	font-weight: ${({ theme }) => theme.typography.weights.semibold};
+	color: ${({ theme }) => theme.colors.texts};
 
 	span {
 		color: ${({ theme }) => theme.colors.primary};
@@ -49,4 +50,5 @@ export const Heading = styled.h4`
 export const Description = styled.p`
 	grid-area: text;
 	text-align: center;
+	color: ${({ theme }) => theme.colors.texts};
 `;

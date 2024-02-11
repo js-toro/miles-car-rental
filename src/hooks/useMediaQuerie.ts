@@ -9,9 +9,12 @@ export const useMediaQuerie = (minWidth: number) => {
 	const [response, setResponse] = useState(false);
 
 	useEffect(() => {
+		setResponse(window.innerWidth < minWidth);
+
 		const handleResize = () => {
 			setResponse(window.innerWidth < minWidth);
 		};
+
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);

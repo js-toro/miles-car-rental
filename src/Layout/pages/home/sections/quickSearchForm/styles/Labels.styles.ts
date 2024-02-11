@@ -9,6 +9,8 @@ const Label = styled.label`
 	align-items: center;
 	column-gap: 16px;
 	padding: 16px;
+
+	background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const PickupLabel = styled(Label)<{ $hasReturn: boolean }>`
@@ -50,4 +52,6 @@ export const LabelInput = styled.input`
 	font-size: 1.8rem;
 	font-family: ${({ theme }) => theme.typography.families.primary};
 	font-weight: ${({ theme }) => theme.typography.weights.medium};
+	color: ${({ theme }) => theme.colors.texts};
+	background-color: ${({ theme }) => theme.colors.background};
 `;

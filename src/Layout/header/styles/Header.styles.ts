@@ -13,7 +13,8 @@ export const HeaderContainer = styled.header`
 	gap: 22px;
 
 	background-color: ${({ theme }) => theme.colors.background};
-	box-shadow: 0 0 0 2px #f9f9f9, 0 0 0 3px #eaeaea;
+	box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.gray[500]},
+		0 0 0 3px ${({ theme }) => theme.colors.gray[600]};
 `;
 
 export const HomeLink = styled.a`

@@ -35,15 +35,26 @@ export const Trustpilot: React.FC = () => {
 							const isFullStar = rating >= star;
 
 							if (isFullStar) {
-								// TODO: reemplazar por la etiqueta <i> para cada icono
-								return <FullRaitingStar key={index} />;
+								return (
+									<i key={index}>
+										<FullRaitingStar />
+									</i>
+								);
 							}
 
 							if (isHalfStar) {
-								return <HalfRaitingStar key={index} />;
+								return (
+									<i key={index}>
+										<HalfRaitingStar />
+									</i>
+								);
 							}
 
-							return <EmptyRaitingStar key={index} />;
+							return (
+								<i key={index}>
+									<EmptyRaitingStar />
+								</i>
+							);
 						}),
 					]}
 				</RaitingStars>

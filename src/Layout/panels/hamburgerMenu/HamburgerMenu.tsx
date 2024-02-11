@@ -7,11 +7,15 @@
 import { useTheme } from 'styled-components';
 import { usePanel, useMediaQuerie } from 'src/hooks';
 import { panelName } from 'src/redux';
-import { SidePanel, LanguagePanelButton } from 'src/components';
+import {
+	SidePanel,
+	LanguagePanelButton,
+	ThemeToggleButton,
+} from 'src/components';
 
 import { Content, Header, Links, Socials } from './styles';
 
-import Logo from '/src/assets/icons/logo.svg?react';
+import Logo from 'src/assets/icons/logo.svg?react';
 import ReturnIcon from 'src/assets/icons/return-arrow.svg?react';
 import FacebookIcon from '/src/assets/icons/facebook.svg?react';
 import TwitterIcon from '/src/assets/icons/twitter.svg?react';
@@ -30,11 +34,15 @@ export const HamburgerMenu: React.FC = () => {
 				<Content>
 					<Header>
 						<button onClick={handleTogglePanel}>
-							<ReturnIcon />
+							<i>
+								<ReturnIcon />
+							</i>
 						</button>
 
 						<a href="#initial">
-							<i><Logo /></i>
+							<i>
+								<Logo />
+							</i>
 						</a>
 
 						<LanguagePanelButton />
@@ -52,20 +60,30 @@ export const HamburgerMenu: React.FC = () => {
 
 						<menu>
 							<a href="#">
-								<FacebookIcon />
+								<i>
+									<FacebookIcon />
+								</i>
 							</a>
 
 							<a href="#">
-								<TwitterIcon />
+								<i>
+									<TwitterIcon />
+								</i>
 							</a>
 
 							<a href="#">
-								<GooglePlusIcon />
+								<i>
+									<GooglePlusIcon />
+								</i>
 							</a>
 
 							<a href="#">
-								<InstagramIcon />
+								<i>
+									<InstagramIcon />
+								</i>
 							</a>
+
+							<ThemeToggleButton />
 						</menu>
 					</Socials>
 				</Content>
