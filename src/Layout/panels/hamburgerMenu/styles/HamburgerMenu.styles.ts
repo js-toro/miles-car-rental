@@ -19,7 +19,7 @@ export const Header = styled.header`
 export const Links = styled.menu`
 	display: flex;
 	flex-direction: column;
-	gap: 64px;
+	gap: 48px;
 
 	padding: 0 24px;
 

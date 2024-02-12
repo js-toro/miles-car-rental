@@ -4,6 +4,7 @@ import DesignPlus from 'src/assets/designs/plus.svg?react';
 
 export const Content = styled.article`
 	position: relative;
+	z-index: 0;
 
 	display: grid;
 	grid:
@@ -11,7 +12,7 @@ export const Content = styled.article`
 		'text text' auto
 		/ 1fr 1fr;
 	align-items: center;
-	row-gap: 32px;
+	row-gap: 16px;
 
 	width: calc(100dvw - 32px);
 	max-width: 450px;
@@ -22,6 +23,7 @@ export const Content = styled.article`
 	background-color: ${({ theme }) => theme.colors.background};
 
 	img {
+		z-index: 1;
 		object-fit: contain;
 	}
 `;
@@ -29,7 +31,7 @@ export const Content = styled.article`
 export const Design = styled(DesignPlus)`
 	position: absolute;
 	top: 18px;
-	left: 40%;
+	left: 41%;
 `;
 
 export const Heading = styled.h4`
@@ -48,6 +50,9 @@ export const Heading = styled.h4`
 
 export const Description = styled.p`
 	grid-area: text;
+	margin: 0 8px;
+
+	line-height: 1.2;
 	text-align: center;
 	color: ${({ theme }) => theme.colors.texts};
 `;

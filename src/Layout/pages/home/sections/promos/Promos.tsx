@@ -21,7 +21,12 @@ export const Promos: React.FC = () => {
 								¡Seguro de viaje <span>gratis!</span>
 							</>
 						}
-						description="Con cobertura médica frente al Coronavirus de USD $100.000"
+						description={
+							<>
+								Con cobertura médica frente al Coronavirus de{' '}
+								<b>USD $100.000</b>
+							</>
+						}
 						image={PCAR_US}
 						alt="Imagen de un auto con un seguro de viaje gratis"
 					/>

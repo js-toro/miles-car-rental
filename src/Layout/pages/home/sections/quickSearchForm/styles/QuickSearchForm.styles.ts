@@ -40,7 +40,7 @@ export const SwitchReturnContainer = styled(Container)`
 export const DatePickersContainer = styled(Container)`
 	overflow: hidden;
 	display: flex;
-	margin-bottom: calc(${buttonHeight} / 2);
+	margin-bottom: 24px;
 
 	text-transform: capitalize;
 	border: 1px solid ${({ theme }) => theme.colors.gray[300]};
@@ -154,10 +154,10 @@ export const SubmitButtonContainer = styled.div`
 `;
 
 export const SubmitButton = styled.button`
-	width: 80px;
+	width: 95px;
 	height: ${buttonHeight};
 
-	border-radius: 10px;
+	border-radius: 16px;
 	border: 6px solid ${({ theme }) => theme.colors.background};
 	background-color: ${({ theme }) => theme.colors.primary};
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
@@ -168,8 +168,8 @@ export const SearchIcon = styled.i`
 	place-content: center;
 
 	svg {
-		width: 22px;
-		height: 22px;
+		width: 26px;
+		height: 26px;
 	}
 `;
 
