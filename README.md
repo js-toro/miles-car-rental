@@ -30,7 +30,7 @@ El presente proyecto responde a la prueba técnica de Browser Travel Solutions p
 
 Se adjuntó un archivo Adobe XD el cual contenía el mockup del home para la aplicación web miles car rental. Basado en ese mockup se construyó el respectivo HTML de la aplicación.
 
-<table align="center">
+<table align="center" style="overflow: hidden">
   <tr>
     <th>
     <p align="center">Diseño</p>
