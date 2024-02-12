@@ -4,7 +4,7 @@
   <h3 align="center">Prueba Técnica - Browser Travel Solutions</h3>
 
   <p align="center">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    • Miles Car Rental v1.0 •
     <br/>
     <br/>
     <a href="https://github.com/js-toro/miles-car-rental"><strong>Ir a la repositorio»</strong></a>
@@ -17,6 +17,7 @@
 <h2> Tabla de contenido</h2>
 
 - [Acerca del proyecto](#acerca-del-proyecto)
+  - [Requisitos de la prueba](#requisitos-de-la-prueba)
 - [Tecnologías usadas](#tecnologías-usadas)
 - [Getting Started](#getting-started)
   - [Prerequisitos](#prerequisitos)
@@ -25,22 +26,69 @@
 
 ## Acerca del proyecto
 
-<!-- ![Screen Shot](images/screenshot.png) -->
+El presente proyecto responde a la prueba técnica de Browser Travel Solutions para el rol de Maquetador | Desarrollador Frontend. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper felis eget arcu tincidunt commodo. Sed tincidunt auctor tellus, sit amet gravida nulla porta a. Quisque nisi leo, placerat id quam non, semper tempus ante. Nullam at nibh lacus. Integer fringilla hendrerit pellentesque. Fusce et ornare quam, eget tristique turpis. Vivamus nec lectus urna. Aenean eleifend, sem sed pretium mattis, lectus eros imperdiet mauris, eu fringilla eros nibh nec mauris.
+Se adjuntó un archivo Adobe XD el cual contenía el mockup del home para la aplicación web miles car rental. Basado en ese mockup se construyó el respectivo HTML de la aplicación.
+
+<table align="center">
+  <tr>
+    <th>
+    <p align="center">Diseño</p>
+    </th>
+    <th></th>
+    <th>
+    <div align="center">Maquetado</div>
+    </th>
+  <tr>
+ <tr>
+    <td>
+    <img src="./markdown/assets/diseño1.jpg" width="300">
+    </td>
+    <td>vs</td>
+    <td>
+    <img src="./markdown/assets/maquetado1.png" width="300">
+    </td>
+  <tr>
+  <tr>
+    <td>
+    <img src="./markdown/assets/diseño2.jpg" width="300">
+    </td>
+    <td>vs</td>
+    <td>
+    <img src="./markdown/assets/maquetado2.png" width="300">
+    </td>
+  <tr>
+</table>
+
+### Requisitos de la prueba
+
+Se debe tener en cuenta los siguientes requisitos para construir la interfaz.
+
+- El proyecto se debe montar con React.js.
+- Crear componentes reutilizables.
+- Estructura HTML5.
+- Los estilos deben ser montados en Styled components.
+- Los estilos deben estar pensados para no dañar el performance del sitio.
+- Todos los elementos del sitio deben ser funcionales.
 
 ## Tecnologías usadas
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper felis eget arcu tincidunt commodo. Sed tincidunt auctor tellus, sit amet gravida nulla porta a. Quisque nisi leo, placerat id quam non, semper tempus ante. Nullam at nibh lacus. Integer fringilla hendrerit pellentesque. Fusce et ornare quam, eget tristique turpis. Vivamus nec lectus urna. Aenean eleifend, sem sed pretium mattis, lectus eros imperdiet mauris, eu fringilla eros nibh nec mauris.
+Para la realización de la aplicación se usaron las siguientes tecnologías.<br>
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) 
+
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Para poner en marcha una copia local siga estos pasos de ejemplo.
 
 ### Prerequisitos
 
-This is an example of how to list things you need to use the software and how to install them.
+Antes de empezar recomiendo una actualización de npm y así obtener los ultimos paquetes, los usados en este proyecto.
 
 * npm
 
@@ -50,24 +98,22 @@ npm install npm@latest -g
 
 ### Instalación
 
-1. Get a free API Key at [https://example.com](https://example.com)
-
-2. Clone the repo
+1. Clona el el repositorio
 
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/js-toro/miles-car-rental.git
 ```
 
-3. Install NPM packages
+2. Instala los paquetes de NPM
 
 ```sh
 npm install
 ```
 
-4. Enter your API in `config.js`
+3. Lanza aplicación en modo local
 
-```JS
-const API_KEY = 'ENTER YOUR API';
+```sh
+npm run dev
 ```
 
 ## Otros proyectos
