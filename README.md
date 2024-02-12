@@ -42,20 +42,26 @@ Se adjuntó un archivo Adobe XD el cual contenía el mockup del home para la apl
   <tr>
  <tr>
     <td>
-    <img src="./markdown/assets/diseño1.jpg" width="300">
+    <img src="./markdown/assets/diseño1.png" 
+    height="500"
+    style="object-fit: contain"
+    >
     </td>
     <td>vs</td>
     <td>
-    <img src="./markdown/assets/maquetado1.png" width="300">
+    <img src="./markdown/assets/maquetado1.png"     height="500"
+    style="object-fit: contain">
     </td>
   <tr>
   <tr>
     <td>
-    <img src="./markdown/assets/diseño2.jpg" width="300">
+    <img src="./markdown/assets/diseño2.png"     height="500"
+    style="object-fit: contain">
     </td>
     <td>vs</td>
     <td>
-    <img src="./markdown/assets/maquetado2.png" width="300">
+    <img src="./markdown/assets/maquetado2.png"     height="500"
+    style="object-fit: contain">
     </td>
   <tr>
 </table>
