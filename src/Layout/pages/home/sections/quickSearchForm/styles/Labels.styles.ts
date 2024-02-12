@@ -18,7 +18,7 @@ const Label = styled.label`
 
 		font-size: 1.8rem;
 		font-family: ${({ theme }) => theme.typography.families.primary};
-		font-weight: ${({ theme }) => theme.typography.weights.medium};
+		font-weight: ${({ theme }) => theme.typography.weights.semibold};
 		color: ${({ theme }) => theme.colors.texts};
 		background-color: ${({ theme }) => theme.colors.background};
 
@@ -63,5 +63,3 @@ export const LabelSpan = styled.span`
 	font-weight: ${({ theme }) => theme.typography.weights.medium};
 	color: ${({ theme }) => theme.colors.gray[900]};
 `;
-
-
